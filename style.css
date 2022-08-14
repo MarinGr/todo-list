@@ -1,0 +1,148 @@
+:root {
+  --body-bg-color: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(171, 102, 255, 1) 0%,
+    rgba(116, 182, 247, 1) 90%
+  );
+  --container-bg-color: #fff;
+  --text-primary-color: #333;
+  --text-line-trough-color: #999;
+  --border-color: #ddd;
+  --primary-color: rgb(131, 78, 196);
+  --hover-color: rgb(104, 63, 155);
+  --active-color: rgb(86, 52, 128);
+  --icon-color: rgba(116, 182, 247, 1);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-image: var(--body-bg-color);
+  color: var(--text-primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+i {
+  cursor: pointer;
+}
+
+.container {
+  width: 360px;
+  min-height: 420px;
+  height: auto;
+  background-color: var(--container-bg-color);
+  padding: 24px 24px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.add-todo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.todo-input {
+  width: 100%;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.todo-input:focus {
+  border-color: var(--primary-color);
+}
+
+.add-btn {
+  font-size: 44px;
+  color: var(--primary-color);
+  transition: 0.2s ease-in-out;
+}
+
+.add-btn:hover {
+  color: var(--hover-color);
+}
+
+.add-btn:active {
+  color: var(--active-color);
+}
+
+.todo-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+}
+
+.uncompleted-todo,
+.completed-todo {
+  color: var(--primary-color);
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.todo-desc {
+  flex-grow: 1;
+}
+
+.line-through {
+  text-decoration: line-through;
+  color: var(--text-line-trough-color);
+}
+
+.delete-icon {
+  margin-right: 8px;
+  font-size: 20px;
+  color: var(--icon-color);
+}
+
+.clear-btn {
+  display: block;
+  margin-left: auto;
+  padding: 6px 12px;
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  font-size: 14px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.clear-btn:hover {
+  background-color: var(--hover-color);
+}
+
+.clear-btn:active {
+  background-color: var(--active-color);
+}
